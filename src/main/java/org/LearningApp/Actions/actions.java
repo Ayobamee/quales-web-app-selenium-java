@@ -1,8 +1,7 @@
 package org.LearningApp.Actions;
 
 import org.LearningApp.PageObjects.LandingPage;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 
 public class actions {
 
@@ -29,6 +28,28 @@ public class actions {
 
 
     }
+
+
+    public void editCourse() {
+
+        LandingPage landingPage = new LandingPage(driver);
+        driver.findElement(By.xpath("//div[@class='MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-1cg8cx6']"))
+                        .click();
+        Dimension size = new Dimension(1536, 960);
+        driver.manage().window().setSize(size);
+        landingPage.getUpdatedCourse().click();
+
+        WebElement Element = driver.findElement(By.xpath("//button[normalize-space()='Update Course']"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+
+        js.executeScript("arguments[0].scrollIntoView();", Element);
+        Element.click();
+
+
+
+    }
+
 
 
     public void deleteCourse() {

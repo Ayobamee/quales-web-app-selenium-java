@@ -4,16 +4,16 @@ import org.LearningApp.AbstractComponents.AbstractComponent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class createdCourse extends AbstractComponent {
+public class updatedCourse extends AbstractComponent {
     WebDriver driver;
-    By createdCourse = By.xpath("//div[normalize-space()='Selenium test']");
+     By updatedCourse = By.xpath("//button[normalize-space()='Edit']");
 
-    public createdCourse(WebDriver driver, By createdCourse) {
-        super(driver, createdCourse);
+    public updatedCourse(WebDriver driver, By updatedCourse) {
+        super(driver, updatedCourse);
     }
 
     public void click() {
-        findElement(createdCourse).click();
+        findElement(updatedCourse).click();
     }
 
 }

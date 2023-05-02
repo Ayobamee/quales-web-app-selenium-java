@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class createdCourse extends AbstractComponent {
     WebDriver driver;
-    By createdCourse = By.xpath("//div[normalize-space()='Selenium test']");
+    By createdCourse = By.xpath("//img[@alt='green iguana']");
 
     public createdCourse(WebDriver driver, By createdCourse) {
         super(driver, createdCourse);

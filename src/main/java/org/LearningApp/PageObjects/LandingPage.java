@@ -28,7 +28,9 @@ public class LandingPage {
 
     By courseCreationDisplayModal = By.xpath("//div[contains(text(),'Course created successfully')]");
 
-    By createdCourse = By.xpath("//div[normalize-space()='Selenium test']");
+    By createdCourse = By.xpath("//img[@alt='green iguana']");
+
+    By updatedCourse = By.xpath("//button[normalize-space()='Edit']");
 
     By deleteBtn = By.xpath("//button[normalize-space()='Delete']");
 
@@ -88,6 +90,10 @@ public class LandingPage {
 
     public createdCourse getCreatedCourse() {
         return new createdCourse(driver, createdCourse);
+    }
+
+    public updatedCourse getUpdatedCourse() {
+        return new updatedCourse(driver, updatedCourse);
     }
 
     public deleteBtn getDeleteBtn() {

@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
@@ -23,8 +24,14 @@ public class signIn {
 
         if (prop.getProperty("browser").equals("chrome")) {
             // System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//driver//chromedriver");
+
+            ChromeOptions option = new ChromeOptions();
+            option.addArguments("--remote-allow-origins=*");
+
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(option);
+//            WebDriverManager.chromedriver().setup();
+//            driver = new ChromeDriver();
 
         } else if (prop.getProperty("browser").equals("firefox")) {
             driver = new FirefoxDriver();

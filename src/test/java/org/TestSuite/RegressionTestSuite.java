@@ -44,6 +44,19 @@ public class RegressionTestSuite extends signIn {
      }
 
 
+
+//    @Test
+//    public void deCourseTest() throws InterruptedException, IOException {
+//        // Performs some test actions
+//        actions actionsObj = new actions(driver);
+//        assertions assertObj = new assertions(driver);
+//        //Create course
+//        actionsObj.editCourse();
+//        //Assert course creation
+////        assertObj.assertCourseCreation();
+//    }
+
+
     // Test that user can delete a course successfully.
     @Test
     public void deleteCourseTest() throws InterruptedException, IOException {
